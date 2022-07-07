@@ -45,7 +45,7 @@ namespace yoketoruvs22
             this.titleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.titleLabel.Font = new System.Drawing.Font("せのびゴシック Medium", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.titleLabel.ForeColor = System.Drawing.Color.Blue;
-            this.titleLabel.Location = new System.Drawing.Point(171, 80);
+            this.titleLabel.Location = new System.Drawing.Point(176, 80);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(446, 99);
             this.titleLabel.TabIndex = 0;
@@ -104,7 +104,7 @@ namespace yoketoruvs22
             this.label1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(194, 149);
+            this.label1.Location = new System.Drawing.Point(206, 149);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(403, 117);
             this.label1.TabIndex = 6;
@@ -113,7 +113,7 @@ namespace yoketoruvs22
             // clearLabel
             // 
             this.clearLabel.Font = new System.Drawing.Font("源ノ角ゴシック Code JP R", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clearLabel.Location = new System.Drawing.Point(212, 179);
+            this.clearLabel.Location = new System.Drawing.Point(230, 164);
             this.clearLabel.Name = "clearLabel";
             this.clearLabel.Size = new System.Drawing.Size(361, 87);
             this.clearLabel.TabIndex = 7;
@@ -122,7 +122,7 @@ namespace yoketoruvs22
             // titileButton
             // 
             this.titileButton.Font = new System.Drawing.Font("Yu Gothic UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.titileButton.Location = new System.Drawing.Point(301, 269);
+            this.titileButton.Location = new System.Drawing.Point(290, 270);
             this.titileButton.Name = "titileButton";
             this.titileButton.Size = new System.Drawing.Size(202, 84);
             this.titileButton.TabIndex = 8;
