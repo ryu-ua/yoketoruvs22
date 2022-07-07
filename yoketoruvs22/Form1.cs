@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace yoketoruvs22
 {
-    public partial class Form1 : Form
+    public partial class よけとる2022 : Form
     {
-        public Form1()
+        public よけとる2022()
         {
             InitializeComponent();
         }
