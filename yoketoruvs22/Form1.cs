@@ -15,11 +15,14 @@ namespace yoketoruvs22
     {
         const bool isDebug = true;
 
+        const int SpeedMax = 10;
         const int PlayerMax = 1;
         const int EnemyMax = 10;
         const int ItemMax = 10;
         const int ChrMax = PlayerMax + EnemyMax + ItemMax;
         Label[] chrs = new Label[ChrMax];
+        int[] vx = new int[ChrMax];
+        int[] vy = new int[ChrMax];
         const int PlayerIndex = 0;
         const int EnemyIndex = PlayerIndex + PlayerMax;
         const int ItemIndex = EnemyIndex + EnemyMax;
@@ -103,7 +106,19 @@ namespace yoketoruvs22
         {
             Point mp = PointToClient(MousePosition);
             // TODO: mpがプレイヤーの中心になるように設定
+            chrs[PlayerIndex].Left = mp.X - chrs[PlayerIndex].Width / 2;
+            chrs[PlayerIndex].Left = mp.Y - chrs[PlayerIndex].Width / 2;
 
+            for (int i=EnemyIndex; i<ChrMax; i++)
+            {
+                chrs[i].Left += vx[i];
+                chrs[i].Top += vy[i];
+
+                if(chrs[i].Left<0)
+                {
+                    
+                }
+            }
         }
 
 
@@ -111,8 +126,6 @@ namespace yoketoruvs22
         {
             currentState = nextState;
             nextState = State.None;
-
-
 
             switch (currentState)
             {
@@ -136,6 +149,8 @@ namespace yoketoruvs22
                     {
                         chrs[i].Left = rand.Next(ClientSize.Width - chrs[i].Width);
                         chrs[i].Top = rand.Next(ClientSize.Height - chrs[i].Height);
+                        vx[i] = rand.Next(-SpeedMax, SpeedMax + 1);
+                        vy[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                     }
                     break;
 
