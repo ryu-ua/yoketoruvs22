@@ -40,6 +40,7 @@ namespace yoketoruvs22
             this.clearLabel = new System.Windows.Forms.Label();
             this.titileButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tempLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -116,7 +117,7 @@ namespace yoketoruvs22
             // clearLabel
             // 
             this.clearLabel.Font = new System.Drawing.Font("源ノ角ゴシック Code JP R", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clearLabel.Location = new System.Drawing.Point(238, 164);
+            this.clearLabel.Location = new System.Drawing.Point(230, 173);
             this.clearLabel.Name = "clearLabel";
             this.clearLabel.Size = new System.Drawing.Size(361, 87);
             this.clearLabel.TabIndex = 7;
@@ -138,12 +139,23 @@ namespace yoketoruvs22
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // tempLabel
+            // 
+            this.tempLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tempLabel.Location = new System.Drawing.Point(81, 300);
+            this.tempLabel.Name = "tempLabel";
+            this.tempLabel.Size = new System.Drawing.Size(38, 55);
+            this.tempLabel.TabIndex = 9;
+            this.tempLabel.Text = "●";
+            this.tempLabel.Visible = false;
+            // 
             // よけとる2022
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tempLabel);
             this.Controls.Add(this.titileButton);
             this.Controls.Add(this.clearLabel);
             this.Controls.Add(this.GameoverLabel);
@@ -172,6 +184,7 @@ namespace yoketoruvs22
         private System.Windows.Forms.Label clearLabel;
         private System.Windows.Forms.Button titileButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label tempLabel;
     }
 }
 
