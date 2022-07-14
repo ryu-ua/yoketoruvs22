@@ -52,9 +52,9 @@ namespace yoketoruvs22
                     startbutton.Visible = true;
                     CPLabel.Visible = true;
                     hiLabel.Visible=true;
-                    label1.Visible=true;
-                    clearLabel.Visible=true;
-                    titileButton.Visible=true;
+                    label1.Visible=false;
+                    clearLabel.Visible=false;
+                    titileButton.Visible=false;
                     break;
 
                 case State.Game:
