@@ -59,7 +59,7 @@ namespace yoketoruvs22
                 {
                     chrs[i].Text = PlayerText;
                 }
-                else if(i<EnemyIndex)
+                else if(i<ItemIndex)
                 {
                     chrs[i].Text = EnemyText;
                 }
