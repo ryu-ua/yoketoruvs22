@@ -36,7 +36,7 @@ namespace yoketoruvs22
             this.timeLabel = new System.Windows.Forms.Label();
             this.leftLabel = new System.Windows.Forms.Label();
             this.hiLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.GameoverLabel = new System.Windows.Forms.Label();
             this.clearLabel = new System.Windows.Forms.Label();
             this.titileButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -102,21 +102,21 @@ namespace yoketoruvs22
             this.hiLabel.TabIndex = 5;
             this.hiLabel.Text = "High Score 100";
             // 
-            // label1
+            // GameoverLabel
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(207, 149);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(403, 117);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Game Over";
+            this.GameoverLabel.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.GameoverLabel.Font = new System.Drawing.Font("Yu Gothic UI", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.GameoverLabel.ForeColor = System.Drawing.Color.Red;
+            this.GameoverLabel.Location = new System.Drawing.Point(207, 149);
+            this.GameoverLabel.Name = "GameoverLabel";
+            this.GameoverLabel.Size = new System.Drawing.Size(403, 117);
+            this.GameoverLabel.TabIndex = 6;
+            this.GameoverLabel.Text = "Game Over";
             // 
             // clearLabel
             // 
             this.clearLabel.Font = new System.Drawing.Font("源ノ角ゴシック Code JP R", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clearLabel.Location = new System.Drawing.Point(223, 149);
+            this.clearLabel.Location = new System.Drawing.Point(238, 164);
             this.clearLabel.Name = "clearLabel";
             this.clearLabel.Size = new System.Drawing.Size(361, 87);
             this.clearLabel.TabIndex = 7;
@@ -125,12 +125,13 @@ namespace yoketoruvs22
             // titileButton
             // 
             this.titileButton.Font = new System.Drawing.Font("Yu Gothic UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.titileButton.Location = new System.Drawing.Point(456, 230);
+            this.titileButton.Location = new System.Drawing.Point(303, 269);
             this.titileButton.Name = "titileButton";
             this.titileButton.Size = new System.Drawing.Size(202, 84);
             this.titileButton.TabIndex = 8;
             this.titileButton.Text = "タイトルへ";
             this.titileButton.UseVisualStyleBackColor = true;
+            this.titileButton.Click += new System.EventHandler(this.titileButton_Click);
             // 
             // timer1
             // 
@@ -145,7 +146,7 @@ namespace yoketoruvs22
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.titileButton);
             this.Controls.Add(this.clearLabel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.GameoverLabel);
             this.Controls.Add(this.hiLabel);
             this.Controls.Add(this.leftLabel);
             this.Controls.Add(this.timeLabel);
@@ -167,7 +168,7 @@ namespace yoketoruvs22
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Label leftLabel;
         private System.Windows.Forms.Label hiLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label GameoverLabel;
         private System.Windows.Forms.Label clearLabel;
         private System.Windows.Forms.Button titileButton;
         private System.Windows.Forms.Timer timer1;
