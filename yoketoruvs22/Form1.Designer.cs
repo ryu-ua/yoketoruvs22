@@ -29,6 +29,7 @@ namespace yoketoruvs22
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.titleLabel = new System.Windows.Forms.Label();
             this.startbutton = new System.Windows.Forms.Button();
             this.CPLabel = new System.Windows.Forms.Label();
@@ -38,6 +39,7 @@ namespace yoketoruvs22
             this.label1 = new System.Windows.Forms.Label();
             this.clearLabel = new System.Windows.Forms.Label();
             this.titileButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // titleLabel
@@ -62,6 +64,7 @@ namespace yoketoruvs22
             this.startbutton.TabIndex = 1;
             this.startbutton.Text = "Start";
             this.startbutton.UseVisualStyleBackColor = false;
+            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
             // 
             // CPLabel
             // 
@@ -104,7 +107,7 @@ namespace yoketoruvs22
             this.label1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(206, 149);
+            this.label1.Location = new System.Drawing.Point(207, 149);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(403, 117);
             this.label1.TabIndex = 6;
@@ -113,7 +116,7 @@ namespace yoketoruvs22
             // clearLabel
             // 
             this.clearLabel.Font = new System.Drawing.Font("源ノ角ゴシック Code JP R", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clearLabel.Location = new System.Drawing.Point(230, 164);
+            this.clearLabel.Location = new System.Drawing.Point(223, 149);
             this.clearLabel.Name = "clearLabel";
             this.clearLabel.Size = new System.Drawing.Size(361, 87);
             this.clearLabel.TabIndex = 7;
@@ -122,12 +125,17 @@ namespace yoketoruvs22
             // titileButton
             // 
             this.titileButton.Font = new System.Drawing.Font("Yu Gothic UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.titileButton.Location = new System.Drawing.Point(290, 270);
+            this.titileButton.Location = new System.Drawing.Point(456, 230);
             this.titileButton.Name = "titileButton";
             this.titileButton.Size = new System.Drawing.Size(202, 84);
             this.titileButton.TabIndex = 8;
             this.titileButton.Text = "タイトルへ";
             this.titileButton.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // よけとる2022
             // 
@@ -162,6 +170,7 @@ namespace yoketoruvs22
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label clearLabel;
         private System.Windows.Forms.Button titileButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
