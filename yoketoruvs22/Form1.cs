@@ -26,7 +26,7 @@ namespace yoketoruvs22
         const int PlayerIndex = 0;
         const int EnemyIndex = PlayerIndex + PlayerMax;
         const int ItemIndex = EnemyIndex + EnemyMax;
-       
+        const int StartTime = 100;
 
         const string PlayerText= "('m')";
         const string EnemyText = "▼";
@@ -34,7 +34,8 @@ namespace yoketoruvs22
 
         static Random rand = new Random();
         
-        int itemCount=0;
+        int itemCount;
+        int time;
 
         enum State
         {
@@ -109,21 +110,25 @@ namespace yoketoruvs22
 
         void UpdateGame()
         {
+            time--;
+            timeLabel.Text = $"Time{time:000}";
+            
+
             Point mp = PointToClient(MousePosition);
             // TODO: mpがプレイヤーの中心になるように設定
             chrs[PlayerIndex].Left = mp.X - chrs[PlayerIndex].Width / 2;
-            chrs[PlayerIndex].Left = mp.Y - chrs[PlayerIndex].Width / 2;
+            chrs[PlayerIndex].Left = mp.Y - chrs[PlayerIndex].Height / 2;
             Point spos = MousePosition;
             Point fpos = PointToClient(spos);
             chrs[PlayerIndex].Left = fpos.X - chrs[PlayerIndex].Width / 2;
             chrs[PlayerIndex].Top = fpos.Y - chrs[PlayerIndex].Height / 2;
-           
+
             for (int i = EnemyIndex; i < ChrMax; i++)
             {
+                if (!chrs[i].Visible) continue;//Visibleはbool型
+                
                 chrs[i].Left += vx[i];
                 chrs[i].Top += vy[i];
-
-
 
                 if (chrs[i].Left < 0)
                 {
@@ -146,8 +151,8 @@ namespace yoketoruvs22
                 }
 
                 //当たり判定
-                if ((mp.X >= chrs[i].Left) && (mp.X < chrs[i].Right) &&
-                    (mp.Y >= chrs[i].Top) && (mp.Y < chrs[i].Bottom))
+                if ((mp.X >= chrs[i].Left) && (mp.X < chrs[i].Right) 
+                    &&(mp.Y >= chrs[i].Top) && (mp.Y < chrs[i].Bottom))
                 {
                     //MessageBox.Show("当たった!");
                     //敵か？
@@ -159,12 +164,12 @@ namespace yoketoruvs22
                     {
                         chrs[i].Visible = false;
                         itemCount--;
-                      
                         if (itemCount <= 0)
                         {
                             nextState = State.Clear;
                         }  
                         leftLabel.Text = $"★:{itemCount:00}";
+
                     }
                 }
 
@@ -204,7 +209,8 @@ namespace yoketoruvs22
                     }
 
                     itemCount = ItemMax;
-                    
+                    time = StartTime+1;
+
                     break;
 
                 case State.Gameover:
@@ -225,12 +231,12 @@ namespace yoketoruvs22
 
         private void startbutton_Click(object sender, EventArgs e)
         {
-            nextState = State.Game;
+            nextState = State.Game;//ゲーム画面へ
         }
 
         private void titileButton_Click(object sender, EventArgs e)
         {
-            nextState = State.Title;
+            nextState = State.Title;//タイトルへ
         }
     }    
 }    
