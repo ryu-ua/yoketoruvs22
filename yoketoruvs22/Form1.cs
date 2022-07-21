@@ -112,7 +112,7 @@ namespace yoketoruvs22
         {
             time--;
             timeLabel.Text = $"Time{time:000}";
-            
+
 
             Point mp = PointToClient(MousePosition);
             // TODO: mpがプレイヤーの中心になるように設定
@@ -126,7 +126,7 @@ namespace yoketoruvs22
             for (int i = EnemyIndex; i < ChrMax; i++)
             {
                 if (!chrs[i].Visible) continue;//Visibleはbool型
-                
+
                 chrs[i].Left += vx[i];
                 chrs[i].Top += vy[i];
 
@@ -151,8 +151,8 @@ namespace yoketoruvs22
                 }
 
                 //当たり判定
-                if ((mp.X >= chrs[i].Left) && (mp.X < chrs[i].Right) 
-                    &&(mp.Y >= chrs[i].Top) && (mp.Y < chrs[i].Bottom))
+                if ((mp.X >= chrs[i].Left) && (mp.X < chrs[i].Right)
+                    && (mp.Y >= chrs[i].Top) && (mp.Y < chrs[i].Bottom))
                 {
                     //MessageBox.Show("当たった!");
                     //敵か？
@@ -167,15 +167,19 @@ namespace yoketoruvs22
                         if (itemCount <= 0)
                         {
                             nextState = State.Clear;
-                        }  
+                        }
                         leftLabel.Text = $"★:{itemCount:00}";
 
                     }
                 }
-
+            }    
+            
+            if ((time <= 0) && (nextState == State.None))
+            {
+               nextState = State.Gameover;
             }
+            
         }
-
         void initProc()
         {
             currentState = nextState;
