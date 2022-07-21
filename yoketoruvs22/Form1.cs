@@ -212,11 +212,12 @@ namespace yoketoruvs22
                         vx[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                         vy[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                         chrs[i].Visible = true;
+                        
                     }
 
                     itemCount = ItemMax;
                     time = StartTime+1;
-
+                    leftLabel.Text = $"★:{itemCount:00}";
                     break;
 
                 case State.Gameover:
