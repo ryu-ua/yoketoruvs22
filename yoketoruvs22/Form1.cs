@@ -26,13 +26,15 @@ namespace yoketoruvs22
         const int PlayerIndex = 0;
         const int EnemyIndex = PlayerIndex + PlayerMax;
         const int ItemIndex = EnemyIndex + EnemyMax;
+       
 
         const string PlayerText= "('m')";
         const string EnemyText = "▼";
         const string ItemText = "★";
 
         static Random rand = new Random();
-
+        
+        int itemCount=0;
 
         enum State
         {
@@ -149,15 +151,23 @@ namespace yoketoruvs22
                 {
                     //MessageBox.Show("当たった!");
                     //敵か？
-                    if (i<ItemIndex)
+                    if (i < ItemIndex)
                     {
                         nextState = State.Gameover;
                     }
                     else
                     {
                         chrs[i].Visible = false;
+                        itemCount--;
+                      
+                        if (itemCount <= 0)
+                        {
+                            nextState = State.Clear;
+                        }  
+                        leftLabel.Text = $"★:{itemCount:00}";
                     }
                 }
+
             }
         }
 
@@ -183,6 +193,7 @@ namespace yoketoruvs22
                     startbutton.Visible = false;
                     CPLabel.Visible = false;
                     hiLabel.Visible = false;
+                    
 
                     for (int i = EnemyIndex; i<ChrMax;i++)
                     {
@@ -191,6 +202,9 @@ namespace yoketoruvs22
                         vx[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                         vy[i] = rand.Next(-SpeedMax, SpeedMax + 1);
                     }
+
+                    itemCount = ItemMax;
+                    
                     break;
 
                 case State.Gameover:
