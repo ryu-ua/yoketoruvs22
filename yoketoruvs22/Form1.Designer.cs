@@ -117,7 +117,7 @@ namespace yoketoruvs22
             // clearLabel
             // 
             this.clearLabel.Font = new System.Drawing.Font("源ノ角ゴシック Code JP R", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clearLabel.Location = new System.Drawing.Point(230, 173);
+            this.clearLabel.Location = new System.Drawing.Point(230, 164);
             this.clearLabel.Name = "clearLabel";
             this.clearLabel.Size = new System.Drawing.Size(361, 87);
             this.clearLabel.TabIndex = 7;

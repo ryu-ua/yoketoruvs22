@@ -77,6 +77,9 @@ namespace yoketoruvs22
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+
+           
+           
             if (nextState != State.None)
             {
                 initProc();
@@ -108,8 +111,12 @@ namespace yoketoruvs22
             // TODO: mpがプレイヤーの中心になるように設定
             chrs[PlayerIndex].Left = mp.X - chrs[PlayerIndex].Width / 2;
             chrs[PlayerIndex].Left = mp.Y - chrs[PlayerIndex].Width / 2;
-
-            for (int i=EnemyIndex; i<ChrMax; i++)
+            Point spos = MousePosition;
+            Point fpos = PointToClient(spos);
+            chrs[PlayerIndex].Left = fpos.X - chrs[PlayerIndex].Width / 2;
+            chrs[PlayerIndex].Top = fpos.Y - chrs[PlayerIndex].Height / 2;
+           
+            for (int i = EnemyIndex; i < ChrMax; i++)
             {
                 chrs[i].Left += vx[i];
                 chrs[i].Top += vy[i];
@@ -135,17 +142,24 @@ namespace yoketoruvs22
                 {
                     vy[i] = -Math.Abs(vy[i]);
                 }
-                 
-                //当たり判定
-                if( (mp.X>=chrs[i].Left)&&(mp.X<chrs[i].Right)&&
-                    (mp.Y>=chrs[i].Top)&& (mp.Y < chrs[i].Bottom))
-                {
-                    MessageBox.Show("当たった!");
-                }
 
+                //当たり判定
+                if ((mp.X >= chrs[i].Left) && (mp.X < chrs[i].Right) &&
+                    (mp.Y >= chrs[i].Top) && (mp.Y < chrs[i].Bottom))
+                {
+                    //MessageBox.Show("当たった!");
+                    //敵か？
+                    if (i<ItemIndex)
+                    {
+                        nextState = State.Gameover;
+                    }
+                    else
+                    {
+                        chrs[i].Visible = false;
+                    }
+                }
             }
         }
-
 
         void initProc()
         {
