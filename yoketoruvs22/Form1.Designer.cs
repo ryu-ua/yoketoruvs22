@@ -79,7 +79,7 @@ namespace yoketoruvs22
             // timeLabel
             // 
             this.timeLabel.Font = new System.Drawing.Font("Yu Gothic UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.timeLabel.Location = new System.Drawing.Point(12, 9);
+            this.timeLabel.Location = new System.Drawing.Point(-4, -4);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(195, 71);
             this.timeLabel.TabIndex = 3;
