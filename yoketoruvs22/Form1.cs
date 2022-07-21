@@ -36,6 +36,7 @@ namespace yoketoruvs22
         
         int itemCount;
         int time;
+        int hiscore;
 
         enum State
         {
@@ -226,6 +227,11 @@ namespace yoketoruvs22
                     clearLabel.Visible = true;
                     titileButton.Visible = true;
                     hiLabel.Visible = true;
+                    if(time>hiscore)
+                    {
+                        hiscore = time;
+                        hiLabel.Text = "HighScore" + hiscore;
+                    }
                     break;
             }
 

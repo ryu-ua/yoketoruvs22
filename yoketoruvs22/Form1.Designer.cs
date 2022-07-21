@@ -97,18 +97,18 @@ namespace yoketoruvs22
             // hiLabel
             // 
             this.hiLabel.Font = new System.Drawing.Font("Yu Gothic UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.hiLabel.Location = new System.Drawing.Point(290, 216);
+            this.hiLabel.Location = new System.Drawing.Point(314, 222);
             this.hiLabel.Name = "hiLabel";
-            this.hiLabel.Size = new System.Drawing.Size(235, 35);
+            this.hiLabel.Size = new System.Drawing.Size(183, 35);
             this.hiLabel.TabIndex = 5;
-            this.hiLabel.Text = "High Score 100";
+            this.hiLabel.Text = "HighScore 0";
             // 
             // GameoverLabel
             // 
             this.GameoverLabel.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.GameoverLabel.Font = new System.Drawing.Font("Yu Gothic UI", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.GameoverLabel.ForeColor = System.Drawing.Color.Red;
-            this.GameoverLabel.Location = new System.Drawing.Point(207, 149);
+            this.GameoverLabel.Location = new System.Drawing.Point(193, 92);
             this.GameoverLabel.Name = "GameoverLabel";
             this.GameoverLabel.Size = new System.Drawing.Size(403, 117);
             this.GameoverLabel.TabIndex = 6;
@@ -117,7 +117,7 @@ namespace yoketoruvs22
             // clearLabel
             // 
             this.clearLabel.Font = new System.Drawing.Font("源ノ角ゴシック Code JP R", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clearLabel.Location = new System.Drawing.Point(230, 164);
+            this.clearLabel.Location = new System.Drawing.Point(222, 122);
             this.clearLabel.Name = "clearLabel";
             this.clearLabel.Size = new System.Drawing.Size(361, 87);
             this.clearLabel.TabIndex = 7;
