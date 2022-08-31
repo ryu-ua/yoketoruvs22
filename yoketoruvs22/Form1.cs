@@ -29,8 +29,8 @@ namespace yoketoruvs22
         const int StartTime = 100;
 
         const string PlayerText= "('m')";
-        const string EnemyText = "▼";
-        const string ItemText = "★";
+        const string EnemyText = "<・>";
+        const string ItemText = "♦";
 
         static Random rand = new Random();
         
@@ -113,7 +113,7 @@ namespace yoketoruvs22
         {
             time--;
             timeLabel.Text = $"Time{time:000}";
-
+            
 
             Point mp = PointToClient(MousePosition);
             // TODO: mpがプレイヤーの中心になるように設定
@@ -169,7 +169,7 @@ namespace yoketoruvs22
                         {
                             nextState = State.Clear;
                         }
-                        leftLabel.Text = $"★:{itemCount:00}";
+                        leftLabel.Text = $"♦:{itemCount:00}";
 
                     }
                 }
@@ -217,7 +217,7 @@ namespace yoketoruvs22
 
                     itemCount = ItemMax;
                     time = StartTime+1;
-                    leftLabel.Text = $"★:{itemCount:00}";
+                    leftLabel.Text = $"♦:{itemCount:00}";
                     break;
 
                 case State.Gameover:
