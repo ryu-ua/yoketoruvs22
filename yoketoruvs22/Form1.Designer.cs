@@ -148,13 +148,14 @@ namespace yoketoruvs22
             this.tempLabel.TabIndex = 9;
             this.tempLabel.Text = "●";
             this.tempLabel.Visible = false;
+          
             // 
             // よけとる2022
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(795, 462);
             this.Controls.Add(this.tempLabel);
             this.Controls.Add(this.titileButton);
             this.Controls.Add(this.clearLabel);

@@ -15,9 +15,9 @@ namespace yoketoruvs22
     {
         const bool isDebug = true;
 
-        const int SpeedMax = 10;
+        const int SpeedMax = 12;
         const int PlayerMax = 1;
-        const int EnemyMax = 10;
+        const int EnemyMax = 15;
         const int ItemMax = 10;
         const int ChrMax = PlayerMax + EnemyMax + ItemMax;
         Label[] chrs = new Label[ChrMax];
@@ -81,8 +81,6 @@ namespace yoketoruvs22
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
-           
            
             if (nextState != State.None)
             {
@@ -165,6 +163,7 @@ namespace yoketoruvs22
                     {
                         chrs[i].Visible = false;
                         itemCount--;
+                        time+=3;
                         if (itemCount <= 0)
                         {
                             nextState = State.Clear;
@@ -231,7 +230,7 @@ namespace yoketoruvs22
                     hiLabel.Visible = true;
                     if(time>hiscore)
                     {
-                        hiscore = time;
+                        hiscore = time-=3;
                         hiLabel.Text = "HighScore" + hiscore;
                     }
                     break;
@@ -250,6 +249,8 @@ namespace yoketoruvs22
         {
             nextState = State.Title;//タイトルへ
         }
+
+       
     }    
 }    
 
