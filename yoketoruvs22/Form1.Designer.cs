@@ -48,11 +48,11 @@ namespace yoketoruvs22
             this.titleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.titleLabel.Font = new System.Drawing.Font("せのびゴシック Medium", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.titleLabel.ForeColor = System.Drawing.Color.Blue;
-            this.titleLabel.Location = new System.Drawing.Point(176, 80);
+            this.titleLabel.Location = new System.Drawing.Point(176, 101);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(446, 99);
             this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "よけとる2022";
+            this.titleLabel.Text = "よけとるHARD";
             this.titleLabel.UseMnemonic = false;
             // 
             // startbutton
@@ -148,7 +148,6 @@ namespace yoketoruvs22
             this.tempLabel.TabIndex = 9;
             this.tempLabel.Text = "●";
             this.tempLabel.Visible = false;
-          
             // 
             // よけとる2022
             // 
