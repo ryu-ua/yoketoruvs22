@@ -19,6 +19,7 @@ namespace yoketoruvs22
         const int PlayerMax = 1;
         const int EnemyMax = 15;
         const int ItemMax = 10;
+        const int EnemyMax2 = 4;
         const int ChrMax = PlayerMax + EnemyMax + ItemMax;
         Label[] chrs = new Label[ChrMax];
         int[] vx = new int[ChrMax];
